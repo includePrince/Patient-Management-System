@@ -1,0 +1,26 @@
+BT Transfusion Charge, 2000
+Cardiac Monitor Charge, 800
+Central Line Charge, 2500
+Dressing (Major) Charge, 1500
+Dressing (Minor) Charge, 500
+Dr Visit, 1000
+E.C.G Charge, 300
+ECHO Charge, 2500
+Emergency Charge, 5000
+Foley Catheter, 500
+General Ward Charge, 1200
+General Ward Nursing Charge, 500
+ICU Bed Charge, 3500
+Infusion Pump Charge, 1500
+Intubation Charge, 2500
+Nebulizer Charge, 200
+NICU Charge, 4500
+Nursing Charge, 800
+Oxygen Charge, 150
+Oxygen Charge On Ventilator, 200
+Plaster Charge, 2500
+RBS Charge, 100
+Registration Charge, 1000
+R.M.O Charge, 800
+Ryle's Tube, 500
+Ventilator Charge, 5500
