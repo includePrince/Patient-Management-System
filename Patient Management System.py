@@ -766,8 +766,16 @@ def updatePatient_update():
             updated_lines.append(line)
             for line in updatePatient_tree.get_children():
                 particulars, adate, idate, unit, qty, rate, amount = updatePatient_tree.item(line, "values")
-                updated_services = f"{particulars}, {adate}, {idate}, {unit}, {qty}, {rate}, {amount}\n"
-                updated_lines.append(updated_services)
+                particulars = particulars.strip()
+                adate = adate.strip()
+                idate = idate.strip()
+                unit = unit.strip()
+                qty = qty.strip()
+                rate = rate.strip()
+                amount = amount.strip()
+                if particulars and adate and idate and unit and qty and rate and amount:
+                    updated_services = f"{particulars}, {adate}, {idate}, {unit}, {qty}, {rate}, {amount}\n"
+                    updated_lines.append(updated_services)
             
     # Step 3: Write the updated content back to the file
     with open(file_path, 'w') as file:
@@ -2031,7 +2039,7 @@ updatePatient_header.grid(row=0, column=0, pady=10, sticky='ew')
 updatePatient_header_back_btn = tk.Button(updatePatient_header, text="Back", bg="orange", fg="#fff", font=("Arial", 16), command=updatePatient_back)
 updatePatient_header_back_btn.grid(row=0, column=0)
 
-updatePatient_header_title = tk.Label(updatePatient_header, text="\t\t\t\t      Discharge Bill      \t\t\t\t", font=('Arial', 18), bg='grey', fg='white')
+updatePatient_header_title = tk.Label(updatePatient_header, text="\t\t\t\t      Update Patient      \t\t\t\t", font=('Arial', 18), bg='grey', fg='white')
 updatePatient_header_title.grid(row=0, column=1)
 
 updatePatient_header_exit_btn = tk.Button(updatePatient_header, text="Exit", bg="red", fg="#fff", font=("Arial", 16), command=exit)
